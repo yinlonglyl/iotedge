@@ -47,9 +47,9 @@ const {
 ```
 
 |
-|callbacks|Object|回调函数对象。-   指定设置设备属性的回调参数，请参见[callbacks.setProperties](#section_ej1_g52_h2b)
--   指定获取设备属性的回调参数，请参见[callbacks.getProperties](#section_r22_5bn_j2b)
--   指定调用设备服务的回调参数，请参见[callbacks.callService](#section_wwf_5bn_j2b)
+|callbacks|Object|回调函数对象。-   指定设置设备属性的回调参数，请参见[callbacks.setProperties](#section_test1)
+-   指定获取设备属性的回调参数，请参见[callbacks.getProperties](#section_test2)
+-   指定调用设备服务的回调参数，请参见[callbacks.callService](#section_test3)
 
 |
 
@@ -63,7 +63,7 @@ callbacks: {
 }
 ```
 
-## callbacks.setProperties {#section_ej1_g52_h2b .section}
+## callbacks.setProperties {#section_test1 .section}
 
 **功能介绍**
 
@@ -82,7 +82,7 @@ callbacks: {
 
 |
 
-## callbacks.getProperties {#section_r22_5bn_j2b .section}
+## callbacks.getProperties {#section_test2 .section}
 
 **功能介绍**
 
@@ -96,7 +96,7 @@ callbacks: {
 
 |
 
-## callbacks.callService {#section_wwf_5bn_j2b .section}
+## callbacks.callService {#section_test3 .section}
 
 **功能介绍**
 
