@@ -48,8 +48,8 @@ const {
 
 |
 |callbacks|Object|回调函数对象。-   指定设置设备属性的回调参数，请参见[callbacks.setProperties](#)
--   指定获取设备属性的回调参数，请参见[callbacks.getProperties](#section_test2)
--   指定调用设备服务的回调参数，请参见[\#](#)
+-   指定获取设备属性的回调参数，请参见[callbacks.getProperties](#)
+-   指定调用设备服务的回调参数，请参见[callbacks.callService](#)
 
 |
 
