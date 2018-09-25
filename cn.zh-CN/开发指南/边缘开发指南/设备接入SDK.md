@@ -1,12 +1,12 @@
 # 设备接入SDK {#concept_ycs_pcp_32b .concept}
 
-设备接入SDK用于您在Link Edge上编写Node.js函数计算，将设备连接到Link Edge。设备接入SDK的源码已开源，详情请见[开源的Node.js库](https://github.com/aliyun/linkedge-thing-access-sdk-nodejs)。
+设备接入SDK用于您在边缘计算节点上开发Node.js驱动，将设备连接到物联网平台。设备接入SDK的源码已开源，详情请见[开源的Node.js库](https://github.com/aliyun/linkedge-thing-access-sdk-nodejs)。
 
 ## 设备接入API使用说明 {#section_o42_tbs_n2b .section}
 
 使用设备接入SDK前需要执行npm install linkedge-thing-access-sdk命令，安装SDK。
 
-设备接入开发API的使用格式如下：
+设备接入SDK的使用格式如下：
 
 ```
 const {
