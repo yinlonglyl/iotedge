@@ -1,6 +1,6 @@
 # 设备接入SDK {#concept_ycs_pcp_32b .concept}
 
-设备接入SDK用于您在边缘计算节点上开发Node.js驱动，将设备连接到物联网平台。设备接入SDK的源码已开源，详情请见[开源的Node.js库](https://github.com/aliyun/linkedge-thing-access-sdk-nodejs)。
+设备接入SDK用于您在边缘计算节点上开发Node.js驱动，将设备连接到边缘计算节点，进而连接到物联网平台。设备接入SDK的源码已开源，详情请见[开源的Node.js库](https://github.com/aliyun/linkedge-thing-access-sdk-nodejs)。
 
 ## 设备接入API使用说明 {#section_o42_tbs_n2b .section}
 
