@@ -1,6 +1,6 @@
 # Python版本SDK {#concept_ycs_pcp_32b .concept}
 
-本章为您介绍Python版本的SDK使用方法及相关API。Link Edge提供Python版本的SDK，名称为lethingaccesssdk。
+本章为您介绍Python版本的SDK使用方法及相关API。Link IoT Edge提供Python版本的SDK，名称为lethingaccesssdk。
 
 ## Python版本设备接入SDK使用说明 {#section_o42_tbs_n2b .section}
 
