@@ -1,8 +1,8 @@
 # 设备接入SDK综合示例 {#concept_xjf_j2p_32b .concept}
 
-本文展示一段使用Node.js版本的SDK，开发驱动的代码片段。设备使用thing标识，拥有一个temperature的只读属性，在连接到边缘计算节点后，每隔2秒向平台上报属性和高温事件。
+本文展示一段使用设备接入SDK，开发驱动的代码片段。设备使用thing标识，拥有一个temperature的只读属性，在连接到边缘计算节点后，每隔2秒向平台上报属性和高温事件。
 
-## 综合示例 {#section_wlk_g52_h2b .section}
+## Node.js版本综合示例 {#section_wlk_g52_h2b .section}
 
 ```
 /*
@@ -133,5 +133,53 @@ module.exports.handler = function (event, context, callback) {
   console.log(context);
   callback(null);
 };
+```
+
+## Python版本综合示例 {#section_rnc_kpx_kfb .section}
+
+```
+# -*- coding: utf-8 -*-
+import lethingaccesssdk
+import time
+
+
+class Temperature_device(lethingaccesssdk.ThingCallback):
+  def __init__(self):
+    self.temperature = 41
+
+  def callService(self, name, input_value):
+    return -1, {}
+
+  def getProperties(self, input_value):
+    if input_value[0] == "temperature":
+      return 0, {input_value[0]: self.LightSwitch}
+    else:
+      return -1
+
+  def setProperties(self, input_value):
+    if "temperature" in input_value:
+      self.LightSwitch = input_value["temperature"]
+      return 0, {}
+
+device_obj_dict = {}
+driver = lethingaccesssdk.ThingAccess()
+driver_conf = driver.get_config()
+if "deviceList" in driver_conf:
+  device_list_conf = driver_conf["deviceList"]
+  device = device_list_conf[0]
+  pk = device["productKey"]
+  dn = device["deviceName"]
+  app_callback = Temperature_device()
+  client = lethingaccesssdk.ThingAccessClient(pk, dn)
+  client.registerAndonline(app_callback)
+  while True:
+    time.sleep(2)
+    if app_callback.temperature > 40:
+      client.reportEvent('high_temperature', {'temperature': app_callback.temperature})
+      client.reportProperties({'temperature': app_callback.temperature})
+
+def handler(event, context):
+
+  return 'hello world'
 ```
 
