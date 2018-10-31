@@ -4,7 +4,7 @@
 
 ## Python版本设备接入SDK使用说明 {#section_o42_tbs_n2b .section}
 
-在使用设备接入SDK前需要执行import lethingaccesssdk命令，将lethingaccesssdk（Python版本SDK）导入到您自己的代码库中。
+在使用设备接入SDK前需要在您的代码库中导入import lethingaccesssdk。
 
 如下示例展示了使用Python版本的SDK进行开发操作：
 
@@ -38,23 +38,6 @@ def handler(event, context):
   
   return 'hello world'
 ```
-
-## ThingAccessClient {#section_qyh_4gm_n2b .section}
-
-设备接入客户端，您可以通过该客户端来主动上报设备属性或事件，也可被动接受云端下发的指令。
-
-**常量定义**
-
-|名称|类型|描述|
-|--|--|--|
-|PRODUCT\_KEY|String|传给ThingAccessClient构造函数的键值，指定云端分配的productKey。|
-|DEVICE\_NAME|String|传给ThingAccessClient构造函数的键值，指定云端分配的deviceName。|
-
-## ThingAccessClient\(productKey，deviceName\) {#section_tcz_ydr_n2b .section}
-
-**功能介绍**
-
-构造函数，使用您自己设备的指定的ProductKey和DeviceName构造。
 
 ## ThingCallback {#section_jyj_lgq_kfb .section}
 
@@ -112,6 +95,16 @@ def handler(event, context):
 ```
 
 |
+
+## ThingAccessClient {#section_qyh_4gm_n2b .section}
+
+设备接入客户端，您可以通过该客户端来主动上报设备属性或事件，也可被动接受云端下发的指令。
+
+## ThingAccessClient\(productKey，deviceName\) {#section_tcz_ydr_n2b .section}
+
+**功能介绍**
+
+构造函数，使用您自己设备的指定的ProductKey和DeviceName构造。
 
 ## registerAndOnline\(ThingCallback object\) {#section_gk2_g52_h2b .section}
 
