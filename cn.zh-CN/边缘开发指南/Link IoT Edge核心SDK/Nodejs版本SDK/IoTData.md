@@ -1,6 +1,6 @@
 # IoTData {#concept_v5s_5gp_32b .concept}
 
-Link IoT Edge核心SDK允许开发人员使用Node.js编写FC函数。
+Link IoT Edge核心SDK允许开发人员使用Node.js编写FC函数。核心SDK源码已开源，详情请见[核心SDK开源的Node.js库](https://github.com/aliyun/linkedge-core-sdk-nodejs)。
 
 包含IoT操作相关API的类。
 
