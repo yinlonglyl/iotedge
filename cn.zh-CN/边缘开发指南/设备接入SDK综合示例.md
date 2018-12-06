@@ -497,16 +497,13 @@ class Temperature_device(lethingaccesssdk.ThingCallback):
       self.LightSwitch = input_value["temperature"]
       return 0, {}
 
-device_obj_dict = {}
 try:
   driver_conf = json.loads(os.environ.get("FC_DRIVER_CONFIG"))
-  if "deviceList" in driver_conf:
+  if "deviceList" in driver_conf and len(driver_conf["deviceList"]) > 0:
     device_list_conf = driver_conf["deviceList"]
     device = device_list_conf[0]
-    pk = device["productKey"]
-    dn = device["deviceName"]
     app_callback = Temperature_device()
-    client = lethingaccesssdk.ThingAccessClient(pk, dn)
+    client = lethingaccesssdk.ThingAccessClient(device)
     client.registerAndonline(app_callback)
     while True:
       time.sleep(2)
