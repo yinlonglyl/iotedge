@@ -145,20 +145,6 @@ device_handle_t leda_register_and_online_by_device_name(const char *product_key,
 device_handle_t leda_register_and_online_by_local_name(const char *product_key, const char *local_name, leda_device_callback_t *device_cb, void *usr_data);
 ```
 
-## leda\_unregister {#section_hvq_gcs_xfb .section}
-
-```
-/*
- * 注销设备, 解除设备和Link IoT Edge关联.
- *
- * dev_handle:  设备在Link IoT Edge本地唯一标识.
- *
- * 阻塞接口, 成功返回LE_SUCCESS,  失败返回错误码.
- *
- */
-int leda_unregister(device_handle_t dev_handle);
-```
-
 ## leda\_online {#section_tmr_gcs_xfb .section}
 
 ```
@@ -276,21 +262,6 @@ int leda_get_config_size(const char *module_name);
  * 阻塞接口, 成功返回LE_SUCCESS, 失败返回错误码.
  */
 int leda_get_config(const char *module_name, char *config, int size);
-```
-
-## leda\_feed\_watchdog {#section_xgx_gcs_xfb .section}
-
-```
-/*
- * 喂看门狗.
- *
- * module_name: 模块名称.
- * thread_name: 需要保活的线程名称.
- * count_down_seconds : 倒计时时间, -1表示停止保活, 单位:秒.
- *
- * 阻塞接口, 成功返回LE_SUCCESS, 失败返回错误码.
- */
-int leda_feed_watchdog(const char *module_name, const char *thread_name, int count_down_seconds);
 ```
 
 ## leda\_get\_device\_handle {#section_g1y_gcs_xfb .section}
