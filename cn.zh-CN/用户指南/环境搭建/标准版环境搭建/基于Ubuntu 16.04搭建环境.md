@@ -10,7 +10,7 @@ Link IoT Edge标准版软件包支持在Ubuntu 16.04 ~ Ubuntu 18.04系统上运�
 |ARMv7|Ubuntu 16.04 ~ Ubuntu 18.04|
 |ARMv8（AArch64）|Ubuntu 16.04 ~ Ubuntu 18.04|
 
-尽管Link IoT Edge可以在其它版本的Ubuntu操作系统上运行，但为了最佳的稳定性和安全性，建议您选择在官方支持的系统版本上运行。
+尽管Link IoT Edge可以在其它版本的Ubuntu操作系统上运行，但为了最佳的稳定性和安全性，建议您选择在官方支持的系统版本上运行。接下来，我们将基于x86\_64 Ubuntu 16.04的平台上为您介绍Link IoT Edge标准版安装部署的方法。Ubuntu16.04~18.04系统在其它架构上的标准版软件包您可以在[发布历史](../cn.zh-CN/产品简介/发布历史.md#)中获取。
 
 ## 准备工作 {#section_srr_y4m_lgb .section}
 
@@ -18,19 +18,13 @@ Link IoT Edge标准版软件包支持在Ubuntu 16.04 ~ Ubuntu 18.04系统上运�
 
 ## 环境设置 {#section_wzw_y3t_jgb .section}
 
-在Ubuntu 16.04 x86\_64机器上需要设置Link IoT Edge运行所依赖的环境。
+在x86\_64 Ubuntu 16.04机器上需要设置Link IoT Edge运行所依赖的环境。
 
-1.  在Ubuntu 16.04 x86\_64机器的本地终端窗口或者SSH终端窗口执行以下命令，下载环境检查工具并运行：
+1.  在x86\_64 Ubuntu 16.04机器的本地终端窗口或者SSH终端窗口执行以下命令，下载环境检查工具并运行：
 
     ```
     wget http://iotedge-web.oss-cn-shanghai.aliyuncs.com/public/testingTool/link-iot-edge_env-check.sh
-    ```
-
-    ```
     sudo chmod +x ./link-iot-edge_env-check.sh
-    ```
-
-    ```
     sudo ./link-iot-edge_env-check.sh
     ```
 
@@ -38,7 +32,7 @@ Link IoT Edge标准版软件包支持在Ubuntu 16.04 ~ Ubuntu 18.04系统上运�
 
 2.  按照运行环境检查工具的提示在您的机器上安装所有必需的依赖项，当检查工具成功运行完成后，返回如下图信息，表示Link IoT Edge能够在您的机器上成功运行。
 
-    ![](https://cdn.nlark.com/lark/0/2018/png/30427/1545309157271-78b10269-e6ad-4885-9811-ee29d980227b.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/103167/154865790638243_zh-CN.png)
 
 
 ## 创建边缘实例和网关 {#section_xzy_nxm_lgb .section}
@@ -50,13 +44,13 @@ Link IoT Edge标准版软件包支持在Ubuntu 16.04 ~ Ubuntu 18.04系统上运�
 
         物联网边缘计算中的网关，承载边缘计算能力，每个实例必须分配一个唯一的网关产品及设备。
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/102593/154779221137158_zh-CN.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/102593/154865790637158_zh-CN.png)
 
     3.  在新建产品页面中，设置网关产品参数，然后单击**完成**。
 
         物联网边缘计算中的新建网关产品功能继承物联网平台**设备管理** \> **产品**中，高级版产品的功能。已自动为您简化创建适合物联网边缘计算中使用的网关产品步骤。
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/102593/154779221137159_zh-CN.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/102593/154865790637159_zh-CN.png)
 
         参数说明如下：
 
@@ -81,7 +75,7 @@ Link IoT Edge标准版软件包支持在Ubuntu 16.04 ~ Ubuntu 18.04系统上运�
 
         物联网边缘计算中的新建网关设备功能继承物联网平台**设备管理** \> **设备**的功能。
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/102593/154779221137160_zh-CN.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/102593/154865790637160_zh-CN.png)
 
     5.  根据界面提示设置参数后，单击**确认**。
 
@@ -99,19 +93,19 @@ Link IoT Edge标准版软件包支持在Ubuntu 16.04 ~ Ubuntu 18.04系统上运�
 3.  实例参数设置完成后，单击**确定**，至此您已创建边缘实例和网关。
 4.  在**实例详情** \> **实例信息**页面，**网关**页签下，单击网关名称右侧的**查看**，获取网关设备信息。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/102593/154779221137161_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/102593/154865790637161_zh-CN.png)
 
 5.  系统跳转到网关设备的设备详情页面，在设备详情页面获取网关设备的设备证书（ProductKey、DeviceName、DeviceSecret），用于后续启动网关。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/102593/154779221137164_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/102593/154865790637164_zh-CN.png)
 
 
 ## 启动Link IoT Edge {#section_tmr_hb5_jgb .section}
 
-1.  登录您的Ubuntu 16.04 x86\_64机器。
+1.  登录您的x86\_64 Ubuntu 16.04机器。
 2.  安装Link IoT Edge软件包。
 
-    执行如下命令下载适用于Ubuntu 16.04 x86\_64系统的Link IoT Edge软件包。
+    执行如下命令下载适用于x86\_64 Ubuntu 16.04系统的Link IoT Edge软件包。
 
     ```
     wget http://link-iot-edge-packet.oss-cn-shanghai.aliyuncs.com/x86-64-linux-gnu/link-iot-edge-x86-64-v1.8.1.tar.gz
@@ -122,16 +116,13 @@ Link IoT Edge标准版软件包支持在Ubuntu 16.04 ~ Ubuntu 18.04系统上运�
     该命令在网关设备的根目录中创建 /linkedge/gateway目录， 并将软件包安装到/linkedge/gateway/build目录。
 
     ```
-    sudo tar xzvf link-iot-edge_v1.8_x86-64.tar.gz -C /
+    sudo tar xzvf link-iot-edge-x86-64-v1.8.1.tar.gz -C /
     ```
 
 4.  配置网关初始化参数到安全存储。
 
     ```
     cd /linkedge/gateway/build/script
-    ```
-
-    ```
     sudo ./set_gw_triple.sh {YourProductKey} {YourDeviceName} {YourDeviceSecret}
     ```
 
@@ -147,9 +138,6 @@ Link IoT Edge标准版软件包支持在Ubuntu 16.04 ~ Ubuntu 18.04系统上运�
 
     ```
     cd /linkedge/gateway/build/script
-    ```
-
-    ```
     sudo ./iot_gateway_start.sh
     ```
 
@@ -165,17 +153,17 @@ Link IoT Edge标准版软件包支持在Ubuntu 16.04 ~ Ubuntu 18.04系统上运�
 
     您也可以在[物联网控制台](http://iot.console.aliyun.com/)，选择**边缘计算** \> **边缘实例**，在已创建好的边缘实例右侧单击**查看**进入**实例详情**页面，查看网关状态。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/103166/154779221137203_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/103166/154865790637203_zh-CN.png)
 
 7.  在实例详情页面中，查看CPU使用率、内存使用率、存储使用率以及实例进程需要授权访问阿里云云监控（CloudMonitor）服务。
     1.  请参考[资源访问授权](../cn.zh-CN/用户指南/资源访问授权.md#)内容，在[RAM访问控制控制台](https://ram.console.aliyun.com)，创建授信**IoT物联网**的服务角色，并为该角色添加名为**AliyunCloudMonitorFullAccess**的访问云监控服务的权限。
     2.  在**实例信息**页签下打开**云监控状态**，如下图所示。
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/102593/154779221137199_zh-CN.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/102593/154865790737199_zh-CN.png)
 
     3.  在实例进程后，单击**查看**，可查看实例各个进程的信息及CPU、内存使用率。
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/102593/154779221137200_zh-CN.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/102593/154865790737200_zh-CN.png)
 
 8.  （可选）在**实例详情**页面，网关名称右侧的操作栏中单击**远程连接**或者**远程文件管理**，方便您远程控制网关设备或对网关设备上的文件进行管理。详细说明请参见[远程运维管理](../cn.zh-CN/用户指南/远程运维管理.md#)。
 
@@ -204,9 +192,6 @@ WantedBy=multi-user.target
 
 ```
 wget http://iotedge-web.oss-cn-shanghai.aliyuncs.com/public/testingTool/LinkIoTEdge.service
-```
-
-```
 sudo cp LinkIoTEdge.service /etc/systemd/system/LinkIoTEdge.service
 ```
 
