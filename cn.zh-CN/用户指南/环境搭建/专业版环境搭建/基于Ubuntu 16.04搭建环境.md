@@ -10,45 +10,45 @@ LE Pro版需要您提前安装好Docker环境，请参考[Docker官方文档](ht
 
 ## 创建边缘实例和网关 {#section_ajw_mcm_lgb .section}
 
-1.  [物联网平台控制台](http://iot.console.aliyun.com/)，选择**边缘计算** \> **边缘实例**。
+1.  [物联网平台控制台](http://iot.console.aliyun.com/)，选择 **边缘计算** \> **边缘实例** 。
 2.  创建一个边缘实例。
     1.  单击**新增实例**，在弹出窗口中设置**实例名称**。
     2.  在**网关产品**后单击**新建网关产品**，为实例创建网关。
 
         物联网边缘计算中的网关，承载边缘计算能力，每个实例必须分配一个网关设备，并且该网关设备同一时间只能被分配到一个边缘实例。
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/102593/155270733137158_zh-CN.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/102593/155367478537158_zh-CN.png)
 
     3.  在新建产品页面中，设置网关产品参数，然后单击**完成**。
 
-        物联网边缘计算中的新建网关产品功能继承物联网平台**设备管理** \> **产品**中，高级版产品的功能。已自动为您简化创建适合物联网边缘计算中使用的网关产品步骤。
+        物联网边缘计算中的新建网关产品功能继承物联网平台 **设备管理** \> **产品** 中，高级版产品的功能。已自动为您简化创建适合物联网边缘计算中使用的网关产品步骤。
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/102593/155270733137159_zh-CN.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/102593/155367478537159_zh-CN.png)
 
         参数说明如下：
 
         |参数|说明|
         |--|--|
         |产品名称|为网关产品设置名称，用于后续的查询及识别网关产品。支持中文、英文字母、数字和下划线，长度限制4~30，一个中文汉字算2位。|
-        |所属分类|选择品类，为该产品定义[物模型](../cn.zh-CN/用户指南/产品与设备/物模型/概述.md#)。可选择为：
+        |所属分类|选择品类，为该产品定义[物模型](../cn.zh-CN/用户指南/产品与设备/物模型/概述.md#)。 可选择为：
 
-        -   **自定义品类**：需根据实际需要，定义产品功能。
+         -   **自定义品类**：需根据实际需要，定义产品功能。
         -   任一既有功能模板。
 
 选择任一物联网平台预定义的品类，快速完成产品的功能定义。选择产品模板后，您可以在该模板基础上，编辑、修改、新增功能。
 
-若您需要的网关没有特殊功能定义，建议您选择**自定义品类**。
+ 若您需要的网关没有特殊功能定义，建议您选择**自定义品类**。
 
-|
+ |
         |产品描述|可输入文字，用来描述产品信息。字数限制为100。可以为空。|
 
         产品创建成功后，页面自动跳转回新增实例页面，并且**网关产品**参数下自动分配了刚创建的网关产品。
 
     4.  在新增实例页面，单击**网关设备**后的**新建网关设备**为网关产品添加设备。
 
-        物联网边缘计算中的新建网关设备功能继承物联网平台**设备管理** \> **设备**的功能。
+        物联网边缘计算中的新建网关设备功能继承物联网平台 **设备管理** \> **设备** 的功能。
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/102593/155270733137160_zh-CN.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/102593/155367478537160_zh-CN.png)
 
     5.  根据界面提示设置参数后，单击**确认**。
 
@@ -57,19 +57,19 @@ LE Pro版需要您提前安装好Docker环境，请参考[Docker官方文档](ht
         |参数|描述|
         |--|--|
         |产品|系统已自动关联上一步创建的网关产品。|
-        |设备名称|为该网关设备命名。设备名称需保持产品内唯一。如不填写，系统将自动生成。**说明：** 设备名称支持大写字母\[A-Z\]、小写字母\[a-z\]、数字\[0-9\]和下划线（\_）。且不能以下划线开头或结尾。
+        |设备名称|为该网关设备命名。设备名称需保持产品内唯一。如不填写，系统将自动生成。 **说明：** 设备名称支持大写字母\[A-Z\]、小写字母\[a-z\]、数字\[0-9\]和下划线（\_）。且不能以下划线开头或结尾。
 
-|
+ |
 
     6.  （可选）在新增实例页面，单击**新增标签**，可以设置实例标签。通过标签您可以更加有效地归类及识别实例。您也可以不设置标签。
 3.  实例参数设置完成后，单击**确定**，至此您已创建边缘实例和网关。
-4.  在**实例详情** \> **实例信息**页面，**网关**页签下，单击网关名称右侧的**查看**，获取网关设备信息。
+4.  在 **实例详情** \> **实例信息** 页面，**网关**页签下，单击网关名称右侧的**查看**，获取网关设备信息。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/102593/155270733137161_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/102593/155367478537161_zh-CN.png)
 
 5.  系统跳转到网关设备的设备详情页面，在设备详情页面获取网关设备的设备证书（ProductKey、DeviceName、DeviceSecret），用于后续启动网关。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/102593/155270733137164_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/102593/155367478637164_zh-CN.png)
 
 
 ## 启动Link IoT Edge {#section_mrp_xwq_kgb .section}
@@ -104,23 +104,23 @@ LE Pro版需要您提前安装好Docker环境，请参考[Docker官方文档](ht
     -   确认是否卸载之前已安装的版本，默认卸载
     拉取Docker镜像完成并启动可能需要等待5 ~ 10分钟，启动完成后通过docker ps命令查看相关Docker容器是否已启动，若系统显示如下图所示信息，表示启动成功。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/103166/155270733137202_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/103166/155367478637202_zh-CN.png)
 
-4.  在[物联网控制台](http://iot.console.aliyun.com/)，选择**边缘计算** \> **边缘实例**，在已创建好的边缘实例右侧单击**查看**进入**实例详情**页面，查看网关状态。
+4.  在[物联网控制台](http://iot.console.aliyun.com/)，选择 **边缘计算** \> **边缘实例** ，在已创建好的边缘实例右侧单击**查看**进入**实例详情**页面，查看网关状态。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/103166/155270733137203_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/103166/155367478637203_zh-CN.png)
 
 5.  在实例详情页面中，查看CPU使用率、内存使用率、存储使用率以及实例进程需要授权访问阿里云云监控（CloudMonitor）服务。
     1.  请参考[云资源访问](../cn.zh-CN/用户指南/云资源访问.md#)内容，在[RAM控制台](https://ram.console.aliyun.com)，创建授信**IoT物联网**的服务角色，并为该角色添加名为**AliyunCloudMonitorFullAccess**的访问云监控服务的权限。
     2.  在**实例信息**页签下打开**云监控状态**，如下图所示。
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/102593/155270733137199_zh-CN.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/102593/155367478637199_zh-CN.png)
 
     3.  在实例进程后，单击**查看**，可查看实例各个进程的信息及CPU、内存使用率。
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/102593/155270733137200_zh-CN.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/102593/155367478637200_zh-CN.png)
 
-6.  您可以在**实例详情**页面，网关名称右侧的操作栏中单击**远程连接**或者**远程文件管理**，方便您远程控制网关设备或对网关设备上的文件进行管理。详细说明请参见[远程运维管理](../cn.zh-CN/用户指南/远程运维管理.md#)。
+6.  您可以在**实例详情**页面，网关名称右侧的操作栏中单击**远程连接**或者**远程文件管理**，方便您远程控制网关设备或对网关设备上的文件进行管理。详细说明请参见[远程运维管理](../cn.zh-CN/用户指南/远程运维管理/远程运维管理.md#)。
 
 ## Link IoT Edge的其它操作 {#section_kpt_4wm_lgb .section}
 
@@ -168,4 +168,8 @@ LE Pro版需要您提前安装好Docker环境，请参考[Docker官方文档](ht
     ./link-iot-edge.sh --packagelog
     ```
 
+
+## 下一步 {#section_g2c_bsp_fhb .section}
+
+环境搭建完成后，您可以参考[设备接入](../cn.zh-CN/用户指南/设备接入/设备接入简介.md#)章节内容，把您的设备接入到物联网边缘计算。
 
