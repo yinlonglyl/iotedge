@@ -45,15 +45,11 @@
     
     def handler(event, context):
       context = {"custom": {"data": "customData"}}
-      context_str = json.dumps(context)
-      context_bytes = base64.standard_b64encode(context_str.encode("utf-8"))
-      invokerContext = context_bytes.decode("utf-8")
-    
       invokeParams = {
         "serviceName": 'EdgeFC',
         "functionName": 'helloworld',
         "invocationType": 'Sync',
-        "invokerContext": invokerContext,
+        "invokerContext": context,
         "payload": 'String message from Python Invoker.'
       };
       res = edgefc.invoke_function(invokeParams)
